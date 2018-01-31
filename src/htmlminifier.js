@@ -6,6 +6,7 @@ var HTMLParser = require('./htmlparser').HTMLParser;
 var RelateUrl = require('relateurl');
 var TokenChain = require('./tokenchain');
 var UglifyJS = require('uglify-js');
+var UglifyES = require('uglify-es');
 var utils = require('./utils');
 
 function trimWhitespace(str) {
@@ -669,6 +670,7 @@ function processOptions(options) {
   }
   if (typeof options.minifyJS !== 'function') {
     var minifyJS = options.minifyJS;
+    var es6 = minifyJS || 'es6';
     if (typeof minifyJS !== 'object') {
       minifyJS = {};
     }
@@ -676,8 +678,14 @@ function processOptions(options) {
     options.minifyJS = function(text, inline) {
       var start = text.match(/^\s*<!--.*/);
       var code = start ? text.slice(start[0].length).replace(/\n\s*-->\s*$/, '') : text;
+      var result;
       minifyJS.parse.bare_returns = inline;
-      var result = UglifyJS.minify(code, minifyJS);
+      if (es6) {
+        result = UglifyES.minify(code, minifyJS);
+      }
+      else {
+        result = UglifyJS.minify(code, minifyJS);
+      }
       if (result.error) {
         options.log(result.error);
         return text;
