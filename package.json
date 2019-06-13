@@ -83,6 +83,9 @@
   "files": [
     "src/*.js",
     "cli.js",
-    "sample-cli-config-file.conf"
-  ]
+    "sample-cli-config-file.conf",
+    "index.d.ts"
+  ],
+  "types": "index.d.ts",
+  "typings": "index.d.ts"
 }
