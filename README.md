@@ -18,3 +18,12 @@ Add manually `"html-minifier": "git+https://github.com/crafter999/html-minifier.
 }
 ...
 ````
+
+Enable it using "es6" in `minifyJS` options like the following example
+````
+minify(html, {
+  removeComments: true,
+  minifyJS: "es6", // <------
+  collapseWhitespace: true
+});
+````
