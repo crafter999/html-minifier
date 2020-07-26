@@ -7,16 +7,10 @@ This is a fork that adds a quick & dumb uglifying support for ES6
 
 # How to use
 
-Add manually `"html-minifier": "git+https://github.com/crafter999/html-minifier.git"` to package.json dependencies.
+Install using the following command
 
 ````
-...
-"dependencies": {
-  ...
-  "html-minifier": "git+https://github.com/crafter999/html-minifier.git",
-  ...
-}
-...
+npm install html-minifier-es6
 ````
 
 Enable it using "es6" in `minifyJS` options like the following example

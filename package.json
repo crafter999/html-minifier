@@ -1,6 +1,6 @@
 {
-  "name": "html-minifier",
-  "description": "Highly configurable, well-tested, JavaScript-based HTML minifier.",
+  "name": "html-minifier-es6",
+  "description": "Support dirty ES6 minifying.",
   "version": "3.5.8",
   "keywords": [
     "cli",
@@ -23,7 +23,7 @@
     "uglifier",
     "uglify"
   ],
-  "homepage": "http://kangax.github.io/html-minifier/",
+  "homepage": "https://github.com/crafter999/html-minifier",
   "author": "Juriy \"kangax\" Zaytsev",
   "maintainers": [
     "Alex Lam <alexlamsl@gmail.com>",
@@ -41,10 +41,10 @@
   "main": "src/htmlminifier.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kangax/html-minifier.git"
+    "url": "https://github.com/crafter999/html-minifier"
   },
   "bugs": {
-    "url": "https://github.com/kangax/html-minifier/issues"
+    "url": "https://github.com/crafter999/html-minifier/issues"
   },
   "engines": {
     "node": ">=4"
